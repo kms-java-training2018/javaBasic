@@ -22,18 +22,19 @@ public class Practie4 {
 
             // 分に変換
             Long min = hour * 60L;
-            System.out.println(min + "分");
 
             // 秒に変換
             Long sec = min * 60;
-            System.out.println(sec + "秒");
 
             // 人日に変換
             Double md =  hour / (double) MAN_DAY_UNIT;
-            System.out.println(md + "人日");
 
             // 人月に変換
             Double mm = hour / (double) (MAN_DAY_UNIT * MAN_MONTH_UNIT);
+
+            System.out.println(sec + "秒");
+            System.out.println(min + "分");
+            System.out.println(md + "人日");
             System.out.println(mm + "人月");
 
         } catch (NumberFormatException e) {
