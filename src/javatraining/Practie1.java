@@ -19,7 +19,7 @@ public class Practie1 {
             System.out.println(input1 + input2);
 
         } catch (IOException e) {
-            System.out.println("入力値取得に失敗しました。");
+            System.out.println("入力値取得に失敗しました。処理を終了します。");
             e.printStackTrace();
         }
     }
