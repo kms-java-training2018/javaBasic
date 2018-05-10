@@ -4,6 +4,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ *
+ * @author mitsuno-shinki
+ *
+ */
 public class Practice1 {
 
 	public static void main(String[] args) {
