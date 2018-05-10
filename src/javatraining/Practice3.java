@@ -15,8 +15,8 @@ public class Practice3 {
 		System.out.println("数値を入力(バイト数)");
 
 		try {
-			
-			//数値を入力
+
+			//数値を入力。
 			String line = reader.readLine();
 
 			//ビットを正確に算出。小数点以下を全表示

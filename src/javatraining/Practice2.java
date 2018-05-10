@@ -9,13 +9,14 @@ public class Practice2 {
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 
+
 		BufferedReader reader = new BufferedReader (new InputStreamReader(System.in));
 
 		System.out.println("数値を入力(バイト数)");
 
 		try {
 
-			//数値を入力
+			//数値を入力。
 			String line = reader.readLine();
 
 			//ビットを算出

@@ -15,7 +15,7 @@ public class Practice4 {
 
 		try {
 
-			//数値を入力
+			//数値を入力。
 			String line = reader.readLine();
 
 			//秒に正しく変換。
