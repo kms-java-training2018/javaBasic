@@ -17,17 +17,20 @@ public class NumberHit {
             int i = (int)(Math.random()*101);
             String line = reader.readLine();
             int answer = Integer.parseInt(line);
-            while (i == answer) {
+
+            while (i != answer) {
                 if (i < answer){
-                System.out.println("残念!もっと小さな数字です");
+                    System.out.println("残念!もっと小さな数字です");
                 } else {
                     System.out.println("残念！もっと大きな数字です");
                 }
                 //再度入力待ち
                 line = reader.readLine();
                 answer = Integer.parseInt(line);
+
             }
             System.out.println("正解！");
+
         } catch (IOException e) {
         } catch (NumberFormatException e) {
             System.out.println("数字ではありません。");
