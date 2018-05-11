@@ -24,7 +24,7 @@ public class Practice4 {
           // 分に変換
           int hun = x * 60;
           // 人日に変換
-          double ninbi =(double) x / man_day;
+          double ninnichi =(double) x / man_day;
           // 人月に変換
           double ningetsu =(double) x / (man_day * man_month);
 
@@ -34,7 +34,7 @@ public class Practice4 {
           // 分を出力
           System.out.println(hun + "分");
           // 人日を出力
-          System.out.println(ninbi + "人日");
+          System.out.println(ninnichi + "人日");
           // 人月を出力
           System.out.println(ningetsu + "人月");
 

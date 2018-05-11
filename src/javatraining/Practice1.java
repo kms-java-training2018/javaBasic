@@ -24,15 +24,15 @@ public class Practice1 {
             String line;
             // 1つめの数値を入力
             line = reader.readLine();
-            String A = line;
+            String word1 = line;
 
             // 2つめの数値を入力
             System.out.println("2つめの数値を入力してください。");
             line = reader.readLine();
-            String B = line;
+            String word2 = line;
 
             // 文字の合体
-            System.out.println(A + B);
+            System.out.println(word1 + word2);
         } catch (IOException e) {
             System.out.println(e);
         } catch (NumberFormatException e) {
