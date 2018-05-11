@@ -9,7 +9,7 @@ public class While7_2 {
              i++;
 
              int j = 0;
-             while(j < i) {
+             while(j < i*i) {
                  System.out.print("*");
                  j++;
              }
