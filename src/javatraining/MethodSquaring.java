@@ -17,13 +17,17 @@ public class MethodSquaring {
     /** 引数を2乗し、結果を返すメソッド **/
     public static int squaring(int n) {
         // 計算して結果を返す
+        return n * n;
 
-        int y = 1;
-        int z = 15; // 累乗値の決定
-        for (int x = 0; x < z; x++) {
-            y = n * y;
-        }
-        return y;
+        // 以下修正前のfor文を使ったメソッドになります
+        // for文を使い、2乗意外の累乗にも対応
+        //int y = 1;
+        //int z = 15; // 累乗値の決定
+        //for (int x = 0; x < z; x++) {
+        //    y = n * y;
+        //}
+        //return y;
+        // ここまで
     }
 
 }
