@@ -3,15 +3,19 @@ package javatraining;
 public class While7_2 {
 
     public static void main(String[] args) {
-        int i = 0;
-        while  (i <10) {
-        	int j = 0;
-            while (j < i * i) {
+        // TODO 自動生成されたメソッド・スタブ
+
+        int i=0;
+        while (i<10) {
+            i++;
+
+            int j=0;
+            while (j<i*i) {
                 System.out.print("*");
-                j++; 
+                j++;
             }
-         System.out.println("");
-         i++;
+            System.out.println("");
+
         }
 
     }
