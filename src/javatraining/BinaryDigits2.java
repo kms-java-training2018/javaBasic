@@ -13,7 +13,7 @@ public class BinaryDigits2 {
 
         //すべての値を出力する
         for (int i = 0; i < binaryDigits.length; i++) {
-            System.out.println(i + "つ目の値は" + binaryDigits[i] + "です。");
+            System.out.println(i+1 + "つ目の値は" + binaryDigits[i] + "です。");
         }
     }
 }
