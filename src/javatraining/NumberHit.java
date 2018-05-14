@@ -1,3 +1,4 @@
+/**
 package javatraining;
 
 import java.io.BufferedReader;
@@ -6,7 +7,7 @@ import java.io.InputStreamReader;
 
 public class NumberHit {
 
-	// [数あてゲーム]0～99の数字をあてるゲームです
+    // [数あてゲーム]0～99の数字をあてるゲームです
     public static void main(String[] args) {
          BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
              try {
@@ -42,3 +43,4 @@ public class NumberHit {
     }
 
 }
+*/
