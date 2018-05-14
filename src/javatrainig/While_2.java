@@ -1,16 +1,19 @@
-package javatraining;
+package javatrainig;
 
-public class For6_2 {
+public class While_2 {
 
     public static void main(String[] args) {
         // TODO 自動生成されたメソッド・スタブ
-
-        for (int i = 0; i < 10; i++) {
-            System.out.print(i +":");
-            for (int j = 0;j<i*i;j++) {
+        int i = 0;
+        while (i < 10 ) {
+            i++;
+            int j = 0;
+            while (j < i * i) {
                 System.out.print("*");
+                j++;
             }
             System.out.println("");
         }
+
     }
 }
