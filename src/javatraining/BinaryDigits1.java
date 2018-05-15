@@ -8,7 +8,9 @@ public class BinaryDigits1 {
 		int num = 1;
 		// 初期値設定
 		for (int i = 0; i < binaryDigits.length; i++) {
+			// 代入
 			binaryDigits[i] = num;
+			// 代入する値の増加
 			num *= 2;
 		}
 		// 表示
