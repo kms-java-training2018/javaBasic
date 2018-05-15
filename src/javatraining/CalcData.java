@@ -1,6 +1,6 @@
 package javatraining;
 
-public class Lesson9_5 {
+public class CalcData {
 
     //問題9-5  どうしてエラーになるのか
 
