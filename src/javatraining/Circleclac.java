@@ -23,7 +23,7 @@ public class Circleclac {
         System.out.println("円2面積" + sumgetArea2);
 
         //円周
-        int ensyuu2 = circleclac.ensyuu();
+        int ensyuu2 = circleclac2.ensyuu();
         System.out.println("円2円周" + ensyuu2);
 
         //合計
