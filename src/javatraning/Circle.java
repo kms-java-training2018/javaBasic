@@ -12,11 +12,11 @@ public class Circle {
 
 
 	//コンストラクタ
-	/**
-	 CircleCalc() {
+
+	 Circle() {
 		radius = 10;
 
-	}*/
+	}
 	Circle(int x) {
 		radius = x;
 
