@@ -1,9 +1,12 @@
 package javaBasic;
 /**
- * テキスト(下)p.74
- * 問題12-4
+ * テキスト(下)p.75
+ * 問題12-5
  */
-public class PlacedRectangle extends Rectangle{
+public class PlacedRectangle{
+
+    //Rectangle型のインスタンス変数を宣言
+    Rectangle nr;
 
     //位置を表すint型のフィールドx,yを設定
     int x;
@@ -11,30 +14,29 @@ public class PlacedRectangle extends Rectangle{
 
     //(1)引数なしのコンストラクタを設定
     PlacedRectangle(){
+        nr = new Rectangle();
         setLocation(0,0);
     }
     //(2)位置付きのコンストラクタを設定
     PlacedRectangle(int x, int y){
-            super(10,20);
-            this.x = x;
-            this.y = y;
+        nr = new Rectangle();
+        setLocation(x,y);
     }
     //(3)位置と大きさ付きのコンストラクタを設定
     PlacedRectangle(int x, int y, int width, int height){
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
+        nr = new Rectangle(width, height);
+        setLocation(x,y);
     }
     //位置を変更するメソッドsetLocationを設定
     void setLocation(int x, int y) {
-        this.width = x;
-        this.height = y;
+        this.x = x;
+        this.y = y;
     }
+
     //標準的な文字列表現を返すメソッドtoStringを設定
     @Override
     public String toString() {
-        return ("[("+ x + "," + y + ")["+ width + ","+ height + "]]");
+        return ("[("+ x + "," + y + ")"+ nr + "]");
     }
 
 
