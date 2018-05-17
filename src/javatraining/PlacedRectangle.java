@@ -1,12 +1,15 @@
 package javatraining;
-
-public class PlacedRectangle  extends Rectangle {
+//--------------------------------------------------------
+// 問題12-5用に変更しました。
+//--------------------------------------------------------
+public class PlacedRectangle{
 
     //--------------------------------------------------------
     // フィールド
     //--------------------------------------------------------
     // フィールドの宣言
-    int x;
+    Rectangle r;
+	int x;
     int y;
 
     //--------------------------------------------------------
@@ -14,17 +17,19 @@ public class PlacedRectangle  extends Rectangle {
     //--------------------------------------------------------
     // 引数なしコンストラクタ
     PlacedRectangle() {
-        this(1,1);
+    	this(1,1);
+        r = new Rectangle();
     }
 
     // 位置付きコンストラクタ
     PlacedRectangle(int x, int y) {
-        setLocation(x, y);
+    	r = new Rectangle();
+    	setLocation(x, y);
     }
 
     // 位置と大きさ付きコンストラクタ
     PlacedRectangle(int x, int y, int width, int height) {
-        super(width, height);
+    	r = new Rectangle(width, height);
         setLocation(x, y);
     }
 
@@ -40,7 +45,7 @@ public class PlacedRectangle  extends Rectangle {
     // x位置、y位置、幅と高さを出力するtoStringメソッド
     @Override
     public String toString() {
-        return "[ (" + x + "," +  y + ") " + super.toString() + " ]";
+        return "[ (" + x + "," +  y + ") " + r + " ]";
     }
 
     // メインメソッド
