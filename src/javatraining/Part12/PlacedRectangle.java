@@ -1,4 +1,5 @@
 package javatraining.Part12;
+
 /**
  *	問題12-4
  *	@author teranoshita-yuta
@@ -11,7 +12,8 @@ public class PlacedRectangle extends Rectangle {
 
     //	コンストラクタ
     PlacedRectangle() {
-
+        setLocation(12, 34);
+        super.setSize(123, 45);
     }
 
     /**
@@ -21,6 +23,7 @@ public class PlacedRectangle extends Rectangle {
      */
     PlacedRectangle(int x, int y) {
         setLocation(x, y);
+        super.setSize(123, 45);
     }
 
     /**
@@ -49,7 +52,7 @@ public class PlacedRectangle extends Rectangle {
     //	文字列を返すメソッド
     @Override
     public String toString() {
-        return "[(" + x + "," + y + ")[" + width + "," + height + "]]";
+        return "[(" + x + "," + y + ")" + super.toString();
     }
 
     /**
