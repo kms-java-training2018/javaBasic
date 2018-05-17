@@ -22,7 +22,6 @@ public class PlacedRectangle extends Rectangle {
     PlacedRectangle(int x, int y, int width, int height) {
         super(width, height);
         setLocation(x, y);
-
     }
 
     //位置を変更するメソッド
