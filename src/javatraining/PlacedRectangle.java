@@ -4,10 +4,26 @@ package javatraining;
 /*
  * 花輪朋典
  *
- * 問題12-5
- * 問題12-4のPlaceRectangleを、Rectangleのサブクラスとしてではなく、
- * Rectangle型のインスタンス変数を持つクラスとして宣言してください。
+ * -------------------------------------------------------------------------------
+ * 問題12-4
+ * 次の機能を持つPlacedRectangleを、Rectangleのサブクラスとして宣言してください。
  *
+ *   ・位置を表すint型のフィールドx, yを持つ
+ *   ・3つのコンストラクタを持つ
+ *       (1)引数なし
+ *       (2)位置付き
+ *       (3)位置と大きさ付き
+ *   ・位置を変更するメソッドsetLocationを持つ
+ *   ・標準的な文字列表現を返すメソッドtoStringを持つ
+ * -------------------------------------------------------------------------------
+ *
+ *
+ * 回答を読みながら、全体的な修正をしました。
+ *  ・superの追加
+ *  ・コメントの追加
+ *  ・Overrideの追加
+ *  ・return文の変更
+ *  ・引数の変更
  *
  */
 
@@ -21,25 +37,27 @@ public class PlacedRectangle extends Rectangle {
     // コンストラクタ
     // 引数なし
     PlacedRectangle(){
-        setLocation(0, 0, 0, 0);
+        setLocation(0, 0);
     }
     // 位置付き
     PlacedRectangle(int x, int y){
-        setLocation(x, y, 0, 0);
+        setLocation(x, y);
     }
     // 位置と大きさ付き
     PlacedRectangle(int x, int y, int width, int height){
-        setLocation(x, y, width, height);
+        super(width, height);
+        setLocation(x, y);
     }
     // 位置を変更するメソッド
-    public void setLocation(int x, int y, int width, int height) {
+    public void setLocation(int x, int y) {
         this.x = x;
         this.y = y;
-        this.width = width;
-        this.height = height;
+
     }
     // 文字列表現を返すメソッド
-    final public String setString() {
-        return "[ (" + x + ", " + y + ") [" + width + ", " + height + "]]";
+    // @Overrideの追記、setStringから、toStringへ変更
+    @Override
+    public String toString() {
+        return "[ (" + x + ", " + y + ") " + super.toString()+" ]";
     }
 }
