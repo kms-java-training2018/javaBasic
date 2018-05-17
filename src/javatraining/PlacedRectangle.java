@@ -1,6 +1,6 @@
 package javatraining;
 
-public class PlacedRectangle{
+public class PlacedRectangle extends Rectangle{
     //-------------------------------------------------------------------
     // フィールド
     //-------------------------------------------------------------------
@@ -8,26 +8,24 @@ public class PlacedRectangle{
     int x;
     // y座標
     int y;
-    // Rectangleクラス設定
-    public static Rectangle rect = new Rectangle(1,1);
     //-------------------------------------------------------------------
     // コンストラクタ
     //-------------------------------------------------------------------
     public PlacedRectangle() {
         // 何も変更しない
+    	super();
         setLocation(0,0);
-        rect.setSize(0, 0);
     }
 
     public PlacedRectangle(int x,int y) {
         // 位置のみ変更
+    	super();
         setLocation(x,y);
-        rect.setSize(0, 0);
     }
     public PlacedRectangle(int x,int y,int w,int h) {
         // 全部変更
+    	super(w,h);
         setLocation(x,y);
-        rect.setSize(w, h);
     }
 
     //-------------------------------------------------------------------
@@ -42,14 +40,15 @@ public class PlacedRectangle{
     // サイズを表示するプログラム
     public String toString() {
         // 数値を返す
-    	// こちらのほうをオーバーロードのものを使いました
-        return "[ (" + x + ", " + y + ")" + rect +"]";
+    	// こちらのほうをtoStringで出来ることを忘れてました
+        return "[(" + x + ", " + y + ")" + super.toString() +"]";
     }
 
     // メインメソッド
      public static void main(String[] args) {
-    	 PlacedRectangle pla = new PlacedRectangle(1,1);
+    	 // クラス作成 位置を送ることも出来る
+    	 Rectangle rect = new PlacedRectangle(1,1);
          // 表示する
-         System.out.println(pla);
+         System.out.println(rect);
      }
 }
