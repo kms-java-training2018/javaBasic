@@ -29,7 +29,8 @@ public class PlacedRectangle extends Rectangle {
     }
     @Override
     public String toString() {
-        return "[ (" + x + ", " + y + ") [" + width + ", " + height + "]]";
+        // superにして明示的に書いてみたつもり
+        return "[ (" + x + ", " + y + ") " + super.toString();
     }
 
 }

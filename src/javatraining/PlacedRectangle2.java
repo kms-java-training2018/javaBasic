@@ -1,6 +1,7 @@
 package javatraining;
 
 public class PlacedRectangle2 {
+    // 問題12-5
     /**
      * フィールド
      */
@@ -29,7 +30,8 @@ public class PlacedRectangle2 {
     }
     @Override
     public String toString() {
-        return "[ (" + x + ", " + y + ") [" + r.width + ", " + r.height + "]]";
+        // Rectangle型でキャストして明示的に書いてみたつもり
+        return "[ (" + x + ", " + y + ") " + ((Rectangle)r).toString();
     }
 
 }
