@@ -12,5 +12,4 @@ public class CircleCalc {
         // 円の円周の和を表示
         System.out.println(cir1.circumferenceReturn() + cir2.circumferenceReturn());
     }
-
 }
