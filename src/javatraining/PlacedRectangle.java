@@ -1,4 +1,4 @@
-//問題12-4
+//問題12-5
 
 package javatraining;
 
@@ -9,20 +9,24 @@ public class PlacedRectangle extends Rectangle {
     int x;
     int y;
 
+    Rectangle r;
+
     //3つのコンストラクタを持つ
     //引数なし
     PlacedRectangle() {
+        r = new Rectangle();
         setLocation(0, 0);
     }
 
     //位置つき
     PlacedRectangle(int x, int y) {
+        r = new Rectangle();
         setLocation(x, y);
     }
 
     //位置と大きさつき
     PlacedRectangle(int x, int y, int width, int height) {
-        super(width, height);
+        r = new Rectangle(width, height);
         setLocation(x, y);
     }
 
