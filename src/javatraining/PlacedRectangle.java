@@ -1,23 +1,22 @@
 package javatraining;
 
 public class PlacedRectangle extends Rectangle {
-    // int型のフィールドx,yを設定
+    Rectangle r;
     int x;
     int y;
 
-    // 引数が無い場合
     PlacedRectangle() {
+        r = new Rectangle();
         setLocation(0, 0);
     }
 
-    // 位置付き(引数2つ)
     PlacedRectangle(int x, int y) {
+        r = new Rectangle();
         setLocation(x, y);
     }
 
-    // 位置と大きさ付(引数4つ)
     PlacedRectangle(int x, int y, int width, int height) {
-        super(width, height);
+        r = new Rectangle(width, height);
         setLocation(x, y);
     }
 
@@ -28,7 +27,7 @@ public class PlacedRectangle extends Rectangle {
 
     @Override
     public String toString() {
-        return "[(" + x + ", " + y + ") " + super.toString() + "]";
+        return "[(" + x + ", " + y + ") " + r + "]";
     }
 
     public static void main(String[] args) {
