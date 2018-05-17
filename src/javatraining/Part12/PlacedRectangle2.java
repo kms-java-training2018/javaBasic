@@ -49,7 +49,7 @@ public class PlacedRectangle2 {
     //	文字列を返すメソッド
     @Override
     public String toString() {
-        return "[(" + x + "," + y + ")" + super.toString();
+        return "[(" + x + "," + y + ")" + re.toString();
     }
 
     /**
