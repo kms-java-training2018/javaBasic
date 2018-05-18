@@ -1,20 +1,25 @@
 package javatraining;
 
-public class PlacedRectangle extends Rectangle{
+public class PlacedRectangle2 {
+    Rectangle r;
     int x;
     int y;
 
     //引数なし
-    PlacedRectangle() {
+    PlacedRectangle2() {
+        r = new Rectangle();
         setLocation(0, 0);
     }
+
     //位置付き
-    PlacedRectangle(int x, int y) {
+    PlacedRectangle2(int x, int y) {
+        r = new Rectangle();
         setLocation(x, y);
     }
+
     //位置と大きさ付き
-    PlacedRectangle(int x, int y, int width, int height) {
-        super(width, height);
+    PlacedRectangle2(int x, int y, int width, int height) {
+        r = new Rectangle(width, height);
         setLocation(x, y);
     }
 
@@ -25,7 +30,6 @@ public class PlacedRectangle extends Rectangle{
 
     @Override
     public String toString() {
-        return "[" + "(" + x + "," + y + ")" + "[" + super.toString() + "]" + "]";
+        return "[" + "(" + x + "," + y + ")" + "[" + r + "]" + "]";
     }
-
 }
