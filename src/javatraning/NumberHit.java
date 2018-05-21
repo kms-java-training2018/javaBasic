@@ -15,7 +15,7 @@ public class NumberHit {
 		try {
 
 			//正解の数字をランダムで決定する
-			Random rand = new Random();
+			Random rand = new Random();a
 			int AN = rand.nextInt(99);
 
 			System.out.println("数を当ててね(0～99)を入力して！");

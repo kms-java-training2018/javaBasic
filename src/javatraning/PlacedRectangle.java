@@ -1,6 +1,7 @@
 package javatraning;
 
-public class PlacedRectangle extends Rectangle {
+
+public class PlacedRectangle extends Rectangle{
 
 	int x;
 	int y;
@@ -19,7 +20,7 @@ public class PlacedRectangle extends Rectangle {
 
 	//引数位置、大きさ付き
 	PlacedRectangle (int x,int y,int width,int height){
-		super(width,height);
+		r.setSize(width, height);
 		setLocation(x,y);
 	}
 
@@ -31,7 +32,7 @@ public class PlacedRectangle extends Rectangle {
 
 	//標準的な文字列を返すメソッド
 	public String toString() {
-		return "("+ x + ","+ y +")"+ super.toString();
+		return "("+ x + ","+ y +")"+ r.toString();
 	}
 
 	// 確認用メインメソッド

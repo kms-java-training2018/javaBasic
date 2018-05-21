@@ -3,7 +3,7 @@ package javatraning;
 public class FizzBuzz {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+		//
 
 		//1から100までを出力するfor文
 		for(int i = 1;i <= 100;i++) {
