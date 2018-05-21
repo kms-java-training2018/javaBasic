@@ -14,104 +14,104 @@ import java.io.InputStreamReader;
 
 public class HitBlow {
 
-	//当てる数がいくつあるか
-	final static int ANSERNUM = 3;
+    //当てる数がいくつあるか
+    final static int ANSERNUM = 3;
 
-	public static void main(String[] args) {
-		//-----------------------------------------------
-		//変数設定
-		//-----------------------------------------------
-		// Playerが入れる数値
-		int[] player = new int[ANSERNUM];
-		// 当てたい数の数値
-		int[] enemy = new int[ANSERNUM];
-		// 何ターン目か表記用変数
-		int turn = 0;
-		// 位置も数値も合っていた数
-		int hit;
-		// 数値だけ合っていた数
-		int blow;
-		//文字読み込み用変数
-		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		//-----------------------------------------------
-		//処理開始
-		//-----------------------------------------------
-		//当てる数が10を超えた場合ばらばらにすることが出来ないので10を超えないようにする
-		if (ANSERNUM < 10) {
-			System.out.println(ANSERNUM + "個の数を当ててね");
-			System.out.println("");
-			for (int i = 0; i < ANSERNUM; i++) {
-				//当てたい数に1～9までの数値を入れる
-				enemy[i] = (int) (Math.random() * 10);
-				for (int j = 0; j < i; j++) {
-					//同じ数値が入っているか確認し入っていた場合数値を上昇させない
-					if (enemy[i] == enemy[j]) {
-						//上昇させないように--を行う
-						i--;
-					}
-				}
-			}
-			try {
-				do {
-					//当たっていた数を初期化
-					hit = 0;
-					blow = 0;
-					//ターン数追加
-					turn++;
-					System.out.println(turn + "ターン目");
-					//数値入力
-					for (int i = 0; i < ANSERNUM; i++) {
-						System.out.println((i + 1) + "つ目の数を入れてね");
-						//文字を入力後数値に変換
-						player[i] = Integer.parseInt(reader.readLine());
-						//想定していない数値を入れられた場合もう一度入れてもらう
-						if (player[i] < 0 || 9 < player[i]) {
-							System.out.println("1～9までの数値だよ？");
-							i--;
-						}
-					}
+    public static void main(String[] args) {
+        //-----------------------------------------------
+        //変数設定
+        //-----------------------------------------------
+        // Playerが入れる数値
+        int[] player = new int[ANSERNUM];
+        // 当てたい数の数値
+        int[] enemy = new int[ANSERNUM];
+        // 何ターン目か表記用変数
+        int turn = 0;
+        // 位置も数値も合っていた数
+        int hit;
+        // 数値だけ合っていた数
+        int blow;
+        //文字読み込み用変数
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        //-----------------------------------------------
+        //処理開始
+        //-----------------------------------------------
+        //当てる数が10を超えた場合ばらばらにすることが出来ないので10を超えないようにする
+        //if (ANSERNUM < 10) {
+        System.out.println(ANSERNUM + "個の数を当ててね");
+        System.out.println("");
+        for (int i = 0; i < ANSERNUM; i++) {
+            //当てたい数に1～9までの数値を入れる
+            enemy[i] = (int) (Math.random() * 10);
+            for (int j = 0; j < i; j++) {
+                //同じ数値が入っているか確認し入っていた場合数値を上昇させない
+                if (enemy[i] == enemy[j]) {
+                    //上昇させないように--を行う
+                    i--;
+                }
+            }
+        }
+        try {
+            do {
+                //当たっていた数を初期化
+                hit = 0;
+                blow = 0;
+                //ターン数追加
+                turn++;
+                System.out.println(turn + "ターン目");
+                //数値入力
+                for (int i = 0; i < ANSERNUM; i++) {
+                    System.out.println((i + 1) + "つ目の数を入れてね");
+                    //文字を入力後数値に変換
+                    player[i] = Integer.parseInt(reader.readLine());
+                    //想定していない数値を入れられた場合もう一度入れてもらう
+                    if (player[i] < 0 || 9 < player[i]) {
+                        System.out.println("1～9までの数値だよ？");
+                        i--;
+                    }
+                }
 
-					//三つの数と比べていく
-					for (int i = 0; i < ANSERNUM; i++) {
-						for (int j = 0; j < ANSERNUM; j++) {
-							//同じ数値があった場合
-							if (enemy[i] == player[j]) {
-								//さらに同じ場所ならばhitに追加違うならblowに追加
-								if (i == j) {
-									hit++;
-								} else {
-									blow++;
-								}
-							}
-						}
-					}
+                //三つの数と比べていく
+                for (int i = 0; i < ANSERNUM; i++) {
+                    for (int j = 0; j < ANSERNUM; j++) {
+                        //同じ数値があった場合
+                        if (enemy[i] == player[j]) {
+                            //さらに同じ場所ならばhitに追加違うならblowに追加
+                            if (i == j) {
+                                hit++;
+                            } else {
+                                blow++;
+                            }
+                        }
+                    }
+                }
 
-					//hit数とblow数を表示
-					System.out.println("hit :" + hit);
-					System.out.println("blow:" + blow);
+                //hit数とblow数を表示
+                System.out.println("hit :" + hit);
+                System.out.println("blow:" + blow);
 
-					if (hit == ANSERNUM) {
-						// 全部当てれた場合
-						System.out.println("おめでとう！！クリアです！！");
-						System.out.println("ターン数:" + turn);
-					} else {
-						// 外れていた場合
-						System.out.println("残念もう一回！！");
-					}
+                if (hit == ANSERNUM) {
+                    // 全部当てれた場合
+                    System.out.println("おめでとう！！クリアです！！");
+                    System.out.println("ターン数:" + turn);
+                } else {
+                    // 外れていた場合
+                    System.out.println("残念もう一回！！");
+                }
 
-					//入力した数値と結果が同じならば処理を終了する
-				} while (hit != ANSERNUM);
-			} catch (IOException e) {
-				//何らかの例外処理が起きたとき
-				System.out.println("例外処理が起きました");
-				System.out.println(e);
-			} catch (NumberFormatException e) {
-				//数値以外を入れられたとき
-				System.out.println("数値以外を入れないでください");
-				System.out.println(e);
-			}
-		} else {
-			System.out.println("当てる数が多すぎます、ゲームになりません");
-		}
-	}
+                //入力した数値と結果が同じならば処理を終了する
+            } while (hit != ANSERNUM);
+        } catch (IOException e) {
+            //何らかの例外処理が起きたとき
+            System.out.println("例外処理が起きました");
+            System.out.println(e);
+        } catch (NumberFormatException e) {
+            //数値以外を入れられたとき
+            System.out.println("数値以外を入れないでください");
+            System.out.println(e);
+        }
+        //} else {
+        //    System.out.println("当てる数が多すぎます、ゲームになりません");
+        //}
+    }
 }

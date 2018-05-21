@@ -5,9 +5,9 @@ public class Rectangle {
     // 変数設定(フィールド)
     //-------------------------------------
     // 幅
-    int width;
+    protected int width;
     // 高さ
-    int height;
+    protected int height;
     // 左隅の位置の横
 //    int x;
     // 左隅の位置の縦
@@ -28,7 +28,7 @@ public class Rectangle {
     //-------------------------------------
     // コンストラクタ
     //-------------------------------------
-    Rectangle(int w,int h) {
+    protected Rectangle(int w,int h) {
         // サイズを設定する
         setSize(w,h);
         // 座標を設定
@@ -46,7 +46,7 @@ public class Rectangle {
     //-------------------------------------
     // サイズを設定する
     //-------------------------------------
-    void setSize(int w,int h) {
+    protected void setSize(int w,int h) {
         // 幅
         width = w;
         // 高さ
@@ -64,7 +64,7 @@ public class Rectangle {
     //-------------------------------------
     // 文字列で表示
     //-------------------------------------
-    @Override
+    //@Override
     public String toString() {
         // 表示
 //        return "[" + x +", " + y +", " + width +", " + height + "]";
