@@ -65,7 +65,8 @@ public class MapPractice {
 
 				//検索終了か否かの入力
 				System.out.println("検索を終了しますか？");
-				System.out.println("する場合→1を入力、しない場合→それ以外を入力");
+				System.out.println("続ける場合→1を入力、しない場合→それ以外を入力");
+				System.out.println("");
 
 				String line2 = reader.readLine();
 				int answer = Integer.parseInt(line2);
