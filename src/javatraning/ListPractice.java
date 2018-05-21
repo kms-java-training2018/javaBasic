@@ -22,18 +22,20 @@ public class ListPractice {
 			} else {
 				//重複しないなら、配列に代入する
 				list.add(cpu);
+
+				//デバッグ用処理毎に代入した値を要素番号と共に表示
+				System.out.println("要素番号"+a+"：" + cpu);
 				a = a + 1;
-				/**デバッグ用処理毎に表示
-				System.out.println(a + "回目" + cpu);
-				*/
 			}
 		}
 
+		/**	いらないやつ
 		//10個入れられたら一覧表示
 		for (Integer x : list) {
 			System.out.print(x);
 			System.out.print(",");
 		}
+		*/
 		System.out.println("");
 
 		//最大値と最小値を出力
