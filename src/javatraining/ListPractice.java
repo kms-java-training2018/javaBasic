@@ -9,7 +9,7 @@ import java.util.Set;
 public class ListPractice {
 
     public static void main(String[] args) {
-        //maxは最大値の要素番号、maxは最大値
+        //maxは最大値の要素番号、max_numは最大値
         int max = 0;
         int max_num = 0;
 
